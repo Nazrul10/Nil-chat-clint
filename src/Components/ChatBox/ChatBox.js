@@ -1,6 +1,7 @@
 import { Box, Dialog } from '@mui/material';
 import { makeStyles, withStyles } from '@mui/styles';
 import React from 'react';
+import Menu from '../menu/Menu';
 
 const style = {
     dialoPaper:{
@@ -19,14 +20,7 @@ const useStyle = makeStyles({
         padding: '10px'
     },
     leftComponents:{
-        minWidth: 380,
-    },
-    image:{
-        width:'220px',
-        height:'220px'
-    },
-    title:{
-        fontSize:35,
+        minWidth: 200,
     }
 })
 const ChatBox = ({classes}) => {
@@ -38,7 +32,7 @@ const ChatBox = ({classes}) => {
               >
                   <Box className={classname.Component}>
                       <Box className={classname.leftComponents}>
-                            gff
+                            <Menu></Menu>
                       </Box>
                       <Box>fghf</Box>
                   </Box>
