@@ -1,11 +1,18 @@
-import { makeStyles, Menu, MenuItem } from '@mui/material';
+import { Menu, MenuItem } from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { MDBIcon } from 'mdbreact';
 import React, { useContext, useState } from 'react';
 import { GoogleLogout } from 'react-google-login';
 import { AccountContext } from '../Context/AccountProvider';
 
+const useStyle = makeStyles({
+  logoutBtn:{
+        boxShadow:'none !important'
+  }
+})
 
 const HeaderMenu = () => {
+  const classes = useStyle();
     const {setAccount} = useContext(AccountContext)
     const clintid = '905435115906-oqc8llsrvnocut97dfo8qf187rpl2sqh.apps.googleusercontent.com'
     const [open, setOpen] = useState(false);
@@ -45,6 +52,7 @@ const HeaderMenu = () => {
                     buttonText="Log out"
                     isSignedIn={true}
                     onLogoutSuccess={onLogoutSuccess}
+                    className={classes.logoutBtn}
                     />
         </MenuItem>
       </Menu>

@@ -1,13 +1,14 @@
 import React from 'react';
 import Conversation from './Conversation';
 import Header from './Header';
-import Search from './Search';
+import SearchPeople from './SearchPeople';
+
 
 const Menu = () => {
     return (
         <div>
             <Header></Header>
-            <Search></Search>
+            <SearchPeople></SearchPeople>
             <Conversation></Conversation>
         </div>
     );
